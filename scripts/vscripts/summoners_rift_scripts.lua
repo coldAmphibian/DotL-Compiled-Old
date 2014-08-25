@@ -1,16 +1,23 @@
 function AntiBlockStart(trigger)
-	print(trigger.activator)
-	print(trigger.caller)
-	if trigger.activator
-		trigger.activator:AddNewModifier(trigger.activator, nil, "MODIFIER_STATE_NO_UNIT_COLLISION", nil)
+	if trigger.activator then
+		trigger.activator:AddNewModifier(trigger.activator, nil, "modifier_phased", nil)
+		end
 	end
-end
 
 function AntiBlockEnd(trigger)
-	print(trigger.activator)
-	print(trigger.caller)
 	if trigger.activator then
-		trigger.activator:RemoveModifierByName("MODIFIER_STATE_NO_UNIT_COLLISION")
+		trigger.activator:RemoveModifierByName("modifier_phased")
 		end
+	end
 
-end
+function BushStart(trigger)
+	if trigger.activator then
+		trigger.activator:AddNewModifier(trigger.activator, nil, "modifier_invisible", nil)
+		end
+	end
+
+function BushEnd(trigger)
+	if trigger.activator then
+		trigger.activator:RemoveModifierByName("modifier_invisible")
+		end
+	end
