@@ -35,6 +35,7 @@ function CAddonTemplateGameMode:InitGameMode()
 	print( "Template addon is loaded." )
 >>>>>>> c3c79920eae981073fd5f449ddd9a41c879db11d
 	GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 2 )
+	GameRules:GetGameModeEntity():SetCameraDistanceOverride(1134)
 end
 
 -- Evaluate the state of the game
