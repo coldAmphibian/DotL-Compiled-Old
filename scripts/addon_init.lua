@@ -30,3 +30,4 @@ end
 
 loadModule ( 'util' )
 loadModule ( 'invokerwars')
+loadModule ( 'summoners_rift_scripts')

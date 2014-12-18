@@ -1,13 +1,13 @@
-<<<<<<< HEAD
+-- <<<<<<< HEAD
 -- load the required LUA file
 require( 'spell_shop_UI' )
 require( 'util' )
 
 -- Generated from template
-=======
+--=======
 -- Generated from template
 
->>>>>>> c3c79920eae981073fd5f449ddd9a41c879db11d
+-- >>>>>>> c3c79920eae981073fd5f449ddd9a41c879db11d
 if CAddonTemplateGameMode == nil then
 	CAddonTemplateGameMode = class({})
 end
@@ -29,11 +29,11 @@ function Activate()
 end
 
 function CAddonTemplateGameMode:InitGameMode()
-<<<<<<< HEAD
+-- <<<<<<< HEAD
 	SpellShopUI:InitGameMode();
-=======
+--=======
 	print( "Template addon is loaded." )
->>>>>>> c3c79920eae981073fd5f449ddd9a41c879db11d
+-- >>>>>>> c3c79920eae981073fd5f449ddd9a41c879db11d
 	GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 2 )
 	GameRules:GetGameModeEntity():SetCameraDistanceOverride(1134)
 end
