@@ -172,3 +172,31 @@
 		"IsHidden"				"0"
 
 	}
+	//=================================================================================
+	// Building Invincibility
+	//=================================================================================
+	"lol_building_invincibility"
+	{
+		"AbilityName"			"lol_tower_fortification"
+		"BaseClass" 			"ability_datadriven"
+		"AbilityBehavior" 		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName" 	"dotl_placeholder"
+		"IsHidden"				"1"
+		"Modifiers"
+		{	
+			""
+			{
+				"IsPassive"				"1"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"Target"				"TARGET"
+						"ScriptFile"			"scripts/vscripts/lol_scripts.lua"
+						"Function"				"TowerInvincibility"
+					}
+				}
+			}
+		}
+	}
+}

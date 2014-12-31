@@ -3,11 +3,14 @@
 --=================================================================================
 TowerTable = {}
 
--- this func will take the format of <<team>>_tower_<<number>> and will look for
--- barracks/inhibitors
-function FillTowerTable()
-	print(FindAllByName("npc_dota_tower")[1])
-end
+-- this func will take the format of <<team>>_<<lane>>_tower_<<number>> and will look for
+-- barracks/inhibitors, and it will 
+-- this function should live on the nexus/ancient/win condition building
+-- it makes sure that towers are invincible until the one before them is killed
+
+function TowerInvincibility(entity)
+	local name = entity:GetName()
+	print(name)
 
 --RemoveSelfFromTable
 --print(FindAllByClassname(string a)
@@ -79,12 +82,6 @@ function BrushEnd(trigger)
 	trigger.activator:RemoveModifierByName("modifier_lol_in_brush")
 	BrushTable[trigger.caller:GetEntityIndex()]["entities"][trigger.activator] = nil
 	--Say(brush, "You have entered: " .. "brush" .. trigger.caller:GetEntityIndex(), false)
-end
- 
-BrushAEnd = BrushBEnd
- 
-function BrushVision(args)
-	print("Fuck the lot of you")
 end
  
 --Stops units from getting stuck
