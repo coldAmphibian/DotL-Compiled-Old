@@ -3,15 +3,15 @@
 {
 	"Version"		"1"
 
-	//-------------------
+	//=================================================================================
 	// Map Mechanic Stuff
-	//-------------------
+	//=================================================================================
 	
-	"lol_brush_vision_passive"
+	"lol_brush_revealer_passive"
 	{
 		"AbilityBehavior" 		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"BaseClass" 					"ability_datadriven"
-		"AbilityTextureName"			"rubick_empty1"
+		"AbilityTextureName"			"dotl_placeholder"
 		"MaxLevel"					 	"1"
 		
 		"Modifiers"
@@ -22,16 +22,17 @@
 				"IsHidden"						"1"
 				"States"
 				{
-					"MODIFIER_STATE_UNSELECTABLE"			"MODIFIER_STATE_VALUE_ENABLED"
-					"MODIFIER_STATE_NO_UNIT_COLLISION"		"MODIFIER_STATE_VALUE_ENABLED"
-					"MODIFIER_STATE_NOT_ON_MINIMAP"			"MODIFIER_STATE_VALUE_ENABLED"
-					"MODIFIER_STATE_PROVIDES_VISION"		"MODIFIER_STATE_VALUE_DISABLED"
-					"MODIFIER_STATE_ROOTED"					"MODIFIER_STATE_VALUE_ENABLED"
-					"MODIFIER_STATE_SOFT_DISARMED"			"MODIFIER_STATE_VALUE_ENABLED"
-					"MODIFIER_STATE_INVULNERABLE"			"MODIFIER_STATE_VALUE_ENABLED"
-					"MODIFIER_STATE_LOW_ATTACK_PRIORITY"	"MODIFIER_STATE_VALUE_ENABLED"
-					"MODIFIER_STATE_FLYING"					"MODIFIER_STATE_VALUE_ENABLED"
-					"MODIFIER_STATE_BLOCK_DISABLED"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_ATTACK_IMMUNE"					"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_BLOCK_DISABLED"					"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_INVULNERABLE"					"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_LOW_ATTACK_PRIORITY"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_HEALTH_BAR"					"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_UNIT_COLLISION"				"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NOT_ON_MINIMAP"					"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NOT_ON_MINIMAP_FOR_ENEMIES"		"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_ROOTED"							"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_SOFT_DISARMED"					"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_UNSELECTABLE"					"MODIFIER_STATE_VALUE_ENABLED"
 
 				}
 			}
@@ -40,7 +41,7 @@
 
 	"lol_inside_brush"
 	{
-		"BaseClass" "ability_datadriven"
+		"BaseClass" 			"ability_datadriven"
 		"AbilityBehavior" 		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_ALL"
 		"AbilityTextureName"	"0"
@@ -52,73 +53,122 @@
 			{
 				"Passive"				"1"
 				"IsHidden"				"1"
+			}
+		}
+	}
+
+	//=================================================================================
+	// Lightning Rod - This one is actually just here for show
+	//=================================================================================
+	"lol_tower_lightning_rod"
+	{
+		"AbilityName"			"lol_tower_lightning_rod"
+		"BaseClass" 			"ability_datadriven"
+		"AbilityBehavior" 		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName" 	"dotl_placeholder"
+		"IsHidden"				"0"
+	}
+
+	//=================================================================================
+	// Penetrating Bullets - 30% armor pen, +37.5% dmg per consecutive shot (75% max), +25% dmg per consecutive shot on champion/hero (50% max)
+	//=================================================================================
+	"lol_tower_penetrating_bullets"
+	{
+		"AbilityName"			"lol_tower_penetrating_bullets"
+		"BaseClass" 			"ability_datadriven"
+		"AbilityBehavior" 		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName" 	"dotl_placeholder"
+
+		"Modifiers"
+		{
+			"Dodge Piercing"
+			{
+				"Passive"						"1"
+				"IsHidden"						"1"
 				"States"
 				{
-					"MODIFIER_STATE_SPECIALLY_DENIABLE" "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_CANNOT_MISS"						"MODIFIER_STATE_VALUE_ENABLED"
 				}
 			}
 		}
 	}
 
-	//=================================================================================================================
-	// Changes target vision range based off units in brush
-	//=================================================================================================================
-	"lol_brush_vision_range"
+	//=================================================================================
+	// Reinforced Armor
+	//=================================================================================
+	"lol_tower_reinforced_armor"
 	{
-		"BaseClass" "ability_datadriven"
-		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityTextureName" "rubick_empty1"
-		"Ability Cast Range" "0"
-		"Ability Cast Point" "0"
+		"AbilityName"			"lol_tower_reinforced_armor"
+		"BaseClass" 			"ability_datadriven"
+		"AbilityBehavior" 		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName" 	"dotl_placeholder"
+		"IsHidden"				"0"
 
-		"RunScript"
-		{
-			"ScriptFile"		"scripts/vscripts/lol_scripts.lua"
-			"Function"			"BrushVision"
+	}
+
+	//=================================================================================
+	// Wardens Eye
+	//=================================================================================
+	"lol_tower_wardens_eye"
+	{
+		"AbilityName"			"lol_tower_wardens_eye"
+		"BaseClass" 			"ability_datadriven"
+		"AbilityBehavior" 		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName" 	"dotl_placeholder"
+
+		"Modifiers"
+		{	
+			"True Sight"
+			{
+				"IsHidden"				"1"
+				"IsPassive"				"1"
+				"OnCreated"
+				{
+					"ApplyModifier"
+					{
+						"Target"		"CASTER"
+						"ModifierName"	"modifier_truesight"
+					}
+				}
+			}
 		}
 	}
 
-	//=================================================================================================================
-	// Templar Assassin: Refraction Holdout
-	//=================================================================================================================
-	"templar_assassin_refraction_holdout"
+	//=================================================================================
+	// Vanguard
+	//=================================================================================
+	"lol_tower_vanguard"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		"AbilityName"			"lol_tower_vanguard"
+		"BaseClass" 			"ability_datadriven"
+		"AbilityBehavior" 		"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_"
+		"AbilityTextureName" 	"dotl_placeholder"
+		"IsHidden"				"0"
 
-		// Casting
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
-
-		// Time		
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"17.0 17.0 17.0 17.0"
-
-		// Cost
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"100"
-		
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"damage_absorb"				"200 300 400 500"
-			}
-			"02"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"bonus_damage"				"20 40 60 80"
-			}
-			"04"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"duration"					"17.0 17.0 17.0 17.0"
-			}
-		}
 	}
-}
+
+	//=================================================================================
+	// A Wizard Did It
+	//=================================================================================
+	"lol_tower_a_wizard_did_it"
+	{
+		"AbilityName"			"lol_tower_a_wizard_did_it"
+		"BaseClass" 			"ability_datadriven"
+		"AbilityBehavior" 		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName" 	"dotl_placeholder"
+		"IsHidden"				"0"
+
+	}
+
+	//=================================================================================
+	// Fortification
+	//=================================================================================
+	"lol_tower_fortification"
+	{
+		"AbilityName"			"lol_tower_fortification"
+		"BaseClass" 			"ability_datadriven"
+		"AbilityBehavior" 		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName" 	"dotl_placeholder"
+		"IsHidden"				"0"
+
+	}

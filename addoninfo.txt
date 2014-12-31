@@ -1,4 +1,4 @@
 "AddonInfo"
 {
-	maps			"dota_pvp summonersrift"
+	maps			"dota_pvp summonersrift brush_test"
 }
