@@ -130,6 +130,53 @@
 						"ModifierName"	"modifier_truesight"
 					}
 				}
+
+				"OnDeath"
+				{
+					"RunScript"
+					{
+						"Target"				"CASTER"
+						"ScriptFile"			"scripts/vscripts/lol_scripts.lua"
+						"Function"				"RemoveInvincibility"
+					}
+				}
+
+				"OnKill"
+				{
+					"RunScript"
+					{
+						"Target"				"CASTER"
+						"ScriptFile"			"scripts/vscripts/lol_scripts.lua"
+						"Function"				"RemoveInvincibility"
+					}
+				}
+				"OnDestroy"
+				{
+					"RunScript"
+					{
+						"Target"				"CASTER"
+						"ScriptFile"			"scripts/vscripts/lol_scripts.lua"
+						"Function"				"RemoveInvincibility"
+					}
+				}
+				"OnAttackStart"
+				{
+					"RunScript"
+					{
+						"Target"				"CASTER"
+						"ScriptFile"			"scripts/vscripts/lol_scripts.lua"
+						"Function"				"RemoveInvincibility"
+					}
+				}
+				"OnTakeDamage"
+				{
+					"RunScript"
+					{
+						"Target"				"CASTER"
+						"ScriptFile"			"scripts/vscripts/lol_scripts.lua"
+						"Function"				"RemoveInvincibility"
+					}
+				}								
 			}
 		}
 	}
@@ -177,25 +224,17 @@
 	//=================================================================================
 	"lol_building_invincibility"
 	{
-		"AbilityName"			"lol_tower_fortification"
+		"AbilityName"			"lol_tower_invincibility"
 		"BaseClass" 			"ability_datadriven"
 		"AbilityBehavior" 		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityTextureName" 	"dotl_placeholder"
 		"IsHidden"				"1"
+		"IsPassive"				"1"
+
 		"Modifiers"
 		{	
-			""
+			"Invicibility"
 			{
-				"IsPassive"				"1"
-				"OnCreated"
-				{
-					"RunScript"
-					{
-						"Target"				"TARGET"
-						"ScriptFile"			"scripts/vscripts/lol_scripts.lua"
-						"Function"				"TowerInvincibility"
-					}
-				}
 			}
 		}
 	}

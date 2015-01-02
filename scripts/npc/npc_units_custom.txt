@@ -2,7 +2,6 @@
 "DOTAUnits"
 {
 	"Version"	"1"
-
 	//=================================================================================
 	// Map Unit: Brush
 	//=================================================================================
@@ -95,7 +94,9 @@
 		"Model"						"models/props_structures/tower_good.mdl"	// Model.
 		"BaseClass"					"npc_dota_tower"
 		"SoundSet"					"Tower.Fire"								// Name of sound set.
-		
+		"MinimapIcon"				"minimap_sword"
+
+
 		// Abilities
 		//----------------------------------------------------------------
 		
@@ -104,7 +105,7 @@
 		"Ability3"					"lol_tower_wardens_eye"						// Ability 3.
 		"Ability4"					"lol_tower_a_wizard_did_it"					// Ability 4.
 		"Ability5"					"lol_tower_fortification"					// Ability 5.
-		"Ability6"					""											// Ability 6 - Extra.
+		"Ability6"					"lol_building_invincibility"				// Ability 6 - Extra.
 		"Ability7"					""											// Ability 7 - Extra.
 		"Ability8"					""											// Ability 8 - Extra.
 		
@@ -172,7 +173,9 @@
 		"Model"						"models/props_structures/tower_bad.mdl"	// Model.
 		"BaseClass"					"npc_dota_tower"
 		"SoundSet"					"Tower.Fire"								// Name of sound set.
-		
+		"MinimapIcon"				"minimap_sword"
+
+
 		// Abilities
 		//----------------------------------------------------------------
 		
@@ -181,7 +184,7 @@
 		"Ability3"					"lol_tower_wardens_eye"					// Ability 3.
 		"Ability4"					"lol_tower_a_wizard_did_it"				// Ability 4.
 		"Ability5"					"lol_tower_fortification"				// Ability 5.
-		"Ability6"					""										// Ability 6 - Extra.
+		"Ability6"					"lol_building_invincibility"			// Ability 6 - Extra.
 		"Ability7"					""										// Ability 7 - Extra.
 		"Ability8"					""										// Ability 8 - Extra.
 		
@@ -250,7 +253,9 @@
 		"Model"						"models/props_structures/tower_good.mdl"	// Model.
 		"BaseClass"					"npc_dota_tower"
 		"SoundSet"					"Tower.Fire"								// Name of sound set.
-		
+		"MinimapIcon"				"minimap_sword"
+
+
 		// Abilities
 		//----------------------------------------------------------------
 		
@@ -260,7 +265,7 @@
 		"Ability4"					"lol_tower_a_wizard_did_it"					// Ability 4.
 		"Ability5"					"lol_tower_vanguard"						// Ability 5.
 		"Ability6"					"lol_tower_fortification"					// Ability 6.
-		"Ability7"					""											// Ability 7 - Extra.
+		"Ability7"					"lol_building_invincibility"				// Ability 7 - Extra.
 		"Ability8"					""											// Ability 8 - Extra.
 		
 		"AbilityLayout"				"6"
@@ -327,7 +332,9 @@
 		"Model"						"models/props_structures/tower_bad.mdl"	// Model.
 		"BaseClass"					"npc_dota_tower"
 		"SoundSet"					"Tower.Fire"								// Name of sound set.
-		
+		"MinimapIcon"				"minimap_sword"
+
+
 		// Abilities
 		//----------------------------------------------------------------
 		
@@ -337,7 +344,7 @@
 		"Ability4"					"lol_tower_a_wizard_did_it"					// Ability 4.
 		"Ability5"					"lol_tower_vanguard"						// Ability 5.
 		"Ability6"					"lol_tower_fortification"					// Ability 6.
-		"Ability7"					""											// Ability 7 - Extra.
+		"Ability7"					"lol_building_invincibility"				// Ability 7 - Extra.
 		"Ability8"					""											// Ability 8 - Extra.
 		
 		"AbilityLayout"				"6"
@@ -404,7 +411,9 @@
 		"Model"						"models/props_structures/tower_good.mdl"	// Model.
 		"BaseClass"					"npc_dota_tower"
 		"SoundSet"					"Tower.Fire"								// Name of sound set.
-		
+		"MinimapIcon"				"minimap_sword"
+
+
 		// Abilities
 		//----------------------------------------------------------------
 		
@@ -413,7 +422,7 @@
 		"Ability3"					"lol_tower_wardens_eye"						// Ability 3.
 		"Ability4"					"lol_tower_a_wizard_did_it"					// Ability 4.
 		"Ability5"					"lol_tower_fortification"					// Ability 5.
-		"Ability6"					""											// Ability 6 - Extra.
+		"Ability6"					"lol_building_invincibility"				// Ability 6 - Extra.
 		"Ability7"					""											// Ability 7 - Extra.
 		"Ability8"					""											// Ability 8 - Extra.
 		
@@ -481,7 +490,9 @@
 		"Model"						"models/props_structures/tower_bad.mdl"	// Model.
 		"BaseClass"					"npc_dota_tower"
 		"SoundSet"					"Tower.Fire"								// Name of sound set.
-		
+		"MinimapIcon"				"minimap_sword"
+
+
 		// Abilities
 		//----------------------------------------------------------------
 		
@@ -490,7 +501,7 @@
 		"Ability3"					"lol_tower_wardens_eye"						// Ability 3.
 		"Ability4"					"lol_tower_a_wizard_did_it"					// Ability 4.
 		"Ability5"					"lol_tower_fortification"					// Ability 5.
-		"Ability6"					""											// Ability 6 - Extra.
+		"Ability6"					"lol_building_invincibility"				// Ability 6 - Extra.
 		"Ability7"					""											// Ability 7 - Extra.
 		"Ability8"					""											// Ability 8 - Extra.
 		
@@ -558,7 +569,9 @@
 		"Model"						"models/props_structures/tower_good.mdl"	// Model.
 		"BaseClass"					"npc_dota_tower"
 		"SoundSet"					"Tower.Fire"								// Name of sound set.
-		
+		"MinimapIcon"				"minimap_sword"
+
+
 		// Abilities
 		//----------------------------------------------------------------
 		
@@ -567,7 +580,7 @@
 		"Ability3"					"lol_tower_wardens_eye"						// Ability 3.
 		"Ability4"					"lol_tower_a_wizard_did_it"					// Ability 4.
 		"Ability5"					"lol_tower_fortification"					// Ability 5.
-		"Ability6"					""											// Ability 6 - Extra.
+		"Ability6"					"lol_building_invincibility"				// Ability 6 - Extra.
 		"Ability7"					""											// Ability 7 - Extra.
 		"Ability8"					""											// Ability 8 - Extra.
 		
@@ -635,7 +648,9 @@
 		"Model"						"models/props_structures/tower_bad.mdl"	// Model.
 		"BaseClass"					"npc_dota_tower"
 		"SoundSet"					"Tower.Fire"								// Name of sound set.
-		
+		"MinimapIcon"				"minimap_sword"
+
+
 		// Abilities
 		//----------------------------------------------------------------
 		
@@ -644,7 +659,7 @@
 		"Ability3"					"lol_tower_wardens_eye"						// Ability 3.
 		"Ability4"					"lol_tower_a_wizard_did_it"					// Ability 4.
 		"Ability5"					"lol_tower_fortification"					// Ability 5.
-		"Ability6"					""											// Ability 6 - Extra.
+		"Ability6"					"lol_building_invincibility"				// Ability 6 - Extra.
 		"Ability7"					""											// Ability 7 - Extra.
 		"Ability8"					""											// Ability 8 - Extra.
 		
@@ -706,6 +721,10 @@
 	}
 
 	//=================================================================================
+	// Building: Inhibitor
+	//=================================================================================
+
+	//=================================================================================
 	// Building: Fort
 	//=================================================================================
 	"npc_dota_defender_fort"
@@ -716,7 +735,7 @@
 		"Model"						"models/buildings/building_racks_melee_reference.vmdl"	// Model.
 		"SoundSet"					"Creep_Good_Melee"					// Name of sound set.
 		"GameSoundsFile"			"soundevents/game_sounds_creeps.vsndevts"
-		"MinimapIcon"				"lol_minimap_viktor"
+		"MinimapIcon"				"minimap_sword"
 		"MinimapIconSize"			"250"
 		"HealthBarOffset"			"400"
 		

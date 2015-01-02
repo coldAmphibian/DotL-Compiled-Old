@@ -2,15 +2,19 @@
 --Tower Invincibility Scripts
 --=================================================================================
 TowerTable = {}
+TowersBeforeInhibs = 3
 
 -- this func will take the format of <<team>>_<<lane>>_tower_<<number>> and will look for
 -- barracks/inhibitors, and it will 
 -- this function should live on the nexus/ancient/win condition building
 -- it makes sure that towers are invincible until the one before them is killed
 
-function TowerInvincibility(entity)
-	local name = entity:GetName()
-	print(name)
+function RemoveInvincibility(entity)
+	--local name = entity:GetName()
+	Say(entity, "I Ran", false)
+	Say(entity, "I Ran", true)
+	--print(name)
+end
 
 --RemoveSelfFromTable
 --print(FindAllByClassname(string a)
@@ -32,7 +36,7 @@ function BrushStart(trigger)
 		BrushTable[name]["revealers"][trigger.activator] = true 					
 		--print(trigger.activator:GetUnitName())
 	else
-		print(trigger.activator:GetName())
+		--print(trigger.activator:GetName())
 		if trigger.activator:GetUnitName() ~= "npc_dota_courier" then
 			giveUnitDataDrivenModifier(trigger.activator, trigger.activator, "modifier_lol_in_brush", -1)
 		end
