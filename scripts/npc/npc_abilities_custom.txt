@@ -67,6 +67,19 @@
 		"AbilityBehavior" 		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityTextureName" 	"dotl_placeholder"
 		"IsHidden"				"0"
+
+		"Modifiers"
+		{
+			"Dodge Piercing"
+			{
+				"Passive"						"1"
+				"IsHidden"						"1"
+				"States"
+				{
+					"MODIFIER_STATE_CANNOT_MISS"						"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
 	}
 
 	//=================================================================================
@@ -129,6 +142,16 @@
 						"Target"		"CASTER"
 						"ModifierName"	"modifier_truesight"
 					}
+				}
+
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"Target"				"CASTER"
+						"ScriptFile"			"scripts/vscripts/lol_scripts.lua"
+						"Function"				"RemoveInvincibility"
+					}					
 				}
 
 				"OnDeath"
@@ -237,5 +260,67 @@
 			{
 			}
 		}
+	}
+
+	//=================================================================================
+	// Inhibitor Armor
+	//=================================================================================
+	"lol_inhibitor_armor"
+	{
+		"AbilityName"			"lol_inhibitor_armor"
+		"BaseClass" 			"ability_datadriven"
+		"AbilityBehavior" 		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName" 	"dotl_placeholder"
+		"IsHidden"				"0"
+	}	
+
+	//=================================================================================
+	// Nexus End
+	//=================================================================================
+	"lol_nexus_end"
+	{
+		"AbilityName"			"lol_nexus_end"
+		"BaseClass" 			"ability_datadriven"
+		"AbilityBehavior" 		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName" 	"dotl_placeholder"
+		"IsHidden"				"0"
+	}
+
+	//=================================================================================
+	// Obelisk Laser
+	//=================================================================================
+	"lol_obelisk_laser"
+	{
+		"AbilityName"			"lol_obelisk_laser"
+		"BaseClass" 			"ability_datadriven"
+		"AbilityBehavior" 		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName" 	"dotl_placeholder"
+		"IsHidden"				"0"
+		
+		"Modifiers"
+		{
+			"Dodge Piercing"
+			{
+				"Passive"						"1"
+				"IsHidden"						"1"
+				"States"
+				{
+					"MODIFIER_STATE_CANNOT_MISS"						"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_INVULNERABLE"						"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
+	}
+	
+	//=================================================================================
+	// Obelisk Overkill
+	//=================================================================================
+	"lol_obelisk_overkill"
+	{
+		"AbilityName"			"lol_obelisk_overkill"
+		"BaseClass" 			"ability_datadriven"
+		"AbilityBehavior" 		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName" 	"dotl_placeholder"
+		"IsHidden"				"0"
 	}
 }
