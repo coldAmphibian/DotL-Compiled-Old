@@ -1,28 +1,4 @@
 --=================================================================================
---Tower Invincibility Scripts
---=================================================================================
-TowerTable = {}
-TowersBeforeInhibs = 3
-
--- this func will take the format of <<team>>_<<lane>>_tower_<<number>> and will look for
--- barracks/inhibitors, and it will 
--- this function should live on the nexus/ancient/win condition building
--- it makes sure that towers are invincible until the one before them is killed
-
-function RemoveInvincibility(entity)
-	--local name = entity:GetName()
-	print("top kek")
-	--print(name)
-
-	thisEntity:SetContextThink("printtopkek", function(entity)
-		print("top kek")
-		return 1
-		end, 0)
-end
-
---RemoveSelfFromTable
---print(FindAllByClassname(string a)
---=================================================================================
 --Brush Scripts
 --=================================================================================
 
@@ -173,18 +149,6 @@ end
 function AntiBlockEnd(trigger)
 	if trigger.activator then
 		trigger.activator:RemoveModifierByName("modifier_phased")
-	end
-end
- 
-function BushStart(trigger)
-	if trigger.activator then
-		trigger.activator:AddNewModifier(trigger.activator, nil, "modifier_invisible", nil)
-	end
-end
- 
-function BushEnd(trigger)
-	if trigger.activator then
-		trigger.activator:RemoveModifierByName("modifier_invisible")
 	end
 end
  

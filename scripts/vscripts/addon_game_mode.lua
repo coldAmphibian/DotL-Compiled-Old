@@ -1,40 +1,52 @@
--- <<<<<<< HEAD
--- load the required LUA file
-require( 'spell_shop_UI' )
-require( 'util' )
+-- load required LUA files
+require('spell_shop_UI')
+require('util')
 
 -- Generated from template
-if CAddonTemplateGameMode == nil then
-	CAddonTemplateGameMode = class({})
+if CAddonLeagueOfLegends == nil then
+	CAddonLeagueOfLegends = class({})
 end
 
-function Precache( context )
+function Precache(context)
 	--[[
 		Precache things we know we'll use.  Possible file types include (but not limited to):
-			PrecacheResource( "model", "*.vmdl", context )
-			PrecacheResource( "soundfile", "*.vsndevts", context )
-			PrecacheResource( "particle", "*.vpcf", context )
-			PrecacheResource( "particle_folder", "particles/folder", context )
+			PrecacheResource("model", "*.vmdl", context)
+			PrecacheResource("soundfile", "*.vsndevts", context)
+			PrecacheResource("particle", "*.vpcf", context)
+			PrecacheResource("particle_folder", "particles/folder", context)
 	]]
 end
 
--- Create the game mode when we activate
+-- Runs on startup
 function Activate()
-	GameRules.AddonTemplate = CAddonTemplateGameMode()
+	GameRules.AddonTemplate = CAddonLeagueOfLegends()
 	GameRules.AddonTemplate:InitGameMode()
+	SelectTowerLogic()
 end
 
-function CAddonTemplateGameMode:InitGameMode()
+--Selects tower logic to use
+function SelectTowerLogic()
+	if GetMapName() == "brush_test" or GetMapName == "summoners_rift" then
+		file = "summoners_rift_tower_logic"
+	end
+	require(file)
+end
+
+--Game Rules
+function CAddonLeagueOfLegends:InitGameMode()
 	SpellShopUI:InitGameMode();
-	print( "Template addon is loaded." )
-	GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 2 )
+	GameRules:GetGameModeEntity():SetThink("OnThink", self, "GlobalThink", 2)
 	GameRules:GetGameModeEntity():SetCameraDistanceOverride(1134)
+	GameRules:SetPreGameTime(0)
+	GameRules:SetGoldPerTick(100000)
+
+	print("GameMode Initialised")
 end
 
 -- Evaluate the state of the game
-function CAddonTemplateGameMode:OnThink()
+function CAddonLeagueOfLegends:OnThink()
 	if GameRules:State_Get() == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
-		--print( "Template addon script is running." )
+		--print("Template addon script is running.")
 	elseif GameRules:State_Get() >= DOTA_GAMERULES_STATE_POST_GAME then
 		return nil
 	end

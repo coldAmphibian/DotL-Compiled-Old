@@ -17,7 +17,17 @@
 				"Passive"					"1"
 				"IsHidden"					"0"
 			}
-		}   
+
+			"modifier_lol_building_invuln"
+			{
+				"Passive"					"1"
+				"IsHidden"					"0"
+				"States"
+				{
+					"MODIFIER_STATE_INVULNERABLE"					"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
 	}
 
 	//=================================================================================================================

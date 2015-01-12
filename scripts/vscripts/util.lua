@@ -237,3 +237,9 @@ function LogDeepPrint(debugInstance, prefix)
     prefix = prefix or ""
     LogEndLine(LogDeepToString(debugInstance, prefix))
 end
+
+function giveUnitDataDrivenModifier(source, target, modifier, dur)
+    --source and target should be hscript-units. The same unit can be in both source and target
+    local item = CreateItem( "lol_modifiers", source, source)
+    item:ApplyDataDrivenModifier(source, target, modifier, {duration=dur})
+end
