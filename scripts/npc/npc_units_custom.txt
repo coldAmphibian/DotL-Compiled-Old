@@ -10,6 +10,7 @@
 		// General
 		//----------------------------------------------------------------
 		"Model"						"models/development/invisiblebox.mdl"								// Model.
+		//"Model"						"models\items\wards\esp_eye_of_thunderkeg\esp_eye_of_thunderkeg.vmdl"
 		"BaseClass"					"npc_dota_creature"
 		"SoundSet"					"0"								// Name of sound set.
 		
