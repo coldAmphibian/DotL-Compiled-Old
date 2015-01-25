@@ -26,10 +26,20 @@ end
 
 --Selects tower logic to use
 function SelectTowerLogic()
-	if GetMapName() == "brush_test" or GetMapName == "summoners_rift" then
+	MapName = GetMapName()
+	if MapName == "brush_test" or MapName == "summoners_rift" then
 		file = "summoners_rift_tower_logic"
 	end
-	require(file)
+
+	if MapName == "howling_abyss" or MapName == "howling_abyss_45" then
+		file = "howling_abyss_tower_logic"
+	end
+
+	if file == nil then
+		print("no tower logic loaded")
+	else
+		require(file)
+	end
 end
 
 --Game Rules

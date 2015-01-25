@@ -37,7 +37,7 @@ function EntityKilled (eventInfo)
 			building:RemoveModifierByName("modifier_lol_building_invuln")
 		end
 
-    	Say(nil, killed_unit:GetName() .. " is kill, " .. nxt .. " is now open", false)
+    	--Say(nil, killed_unit:GetName() .. " is kill, " .. nxt .. " is now open", false)
     end
 end
 

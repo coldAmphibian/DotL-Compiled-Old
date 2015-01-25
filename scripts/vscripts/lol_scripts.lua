@@ -154,7 +154,7 @@ function BrushThinker(trigger, name)
 				return nil
 			end
 
-			return 0.05
+			return 0.01
 		end, 0)
 end	
 
